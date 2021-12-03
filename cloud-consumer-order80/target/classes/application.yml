@@ -1,0 +1,17 @@
+Server:
+  port: 8002
+
+
+spring:
+  application:
+    name: cloud-consumer-order80
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: org.gjt.mm.mysql.Driver
+    url: jdbc:mysql://rm-bp1b879u29h2125j1oo.mysql.rds.aliyuncs.com:3306/special_car?useUnicode=true&characterEncoding=UTF-8
+    username: liyuli
+    password: liyuli@2021
+
+
+mybatis:
+  type-aliases-package: com.atgugu.springcloud.entities
