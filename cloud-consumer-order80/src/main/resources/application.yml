@@ -12,6 +12,16 @@ spring:
     username: liyuli
     password: liyuli@2021
 
+#eureka的配置補充
+eureka:
+  client:
+    #表示是否將自己注冊进入EurekaServer 默认是true
+    register-with-eureka: true
+    #是否从EurekaServer抓取已有的注册信息，默认是true，单节点无所谓，集群必须设置为ture才能配合ribbon的负载均衡
+    fetchRegistry: true
+    service-url:
+      defaultZone: http://localhost:7001/eureka
+
 
 mybatis:
   type-aliases-package: com.atgugu.springcloud.entities

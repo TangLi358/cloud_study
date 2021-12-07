@@ -67,6 +67,11 @@
             <version>2.2.5.RELEASE</version>
             <optional>true</optional>
         </dependency>
+        <!-- 补充注册Eureka client 的依赖 -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
     </dependencies>
 
 
