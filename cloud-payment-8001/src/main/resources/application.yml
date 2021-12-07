@@ -19,8 +19,9 @@ eureka:
     #是否从EurekaServer抓取已有的注册信息，默认是true，单节点无所谓，集群必须设置为ture才能配合ribbon的负载均衡
     fetchRegistry: true
     service-url:
-      defaultZone: http://localhost:7001/eureka
-
+      #defaultZone: http://localhost:7001/eureka  单机版
+      #集群版 都要注册上
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
 mybatis:
   mapper-locations: classpath:mapper/*.xml
   type-aliases-package: com.atguigu.springcloud.entities
