@@ -3,6 +3,7 @@ package com.atgugu.springcloud.controller;
 import entities.CommonResult;
 import entities.Payment;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,7 +15,12 @@ import javax.annotation.Resource;
 @Slf4j
 public class OrderController {
 
-    public static  final String PAYMENT_URL = "http://localhost:8001";
+    //直接调用
+//    public static  final String PAYMENT_URL = "http://localhost:8001";
+
+    //需要开启RestTemplate的负载均衡能力 把指定的服务地址 换成微服务的名称
+    @LoadBalanced
+    public static final String PAYMENT_URL = "http://CLOUD_PAYMENT_SERVICE";
 
     @Resource
     private RestTemplate restTemplate;
