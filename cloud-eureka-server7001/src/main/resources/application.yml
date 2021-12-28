@@ -1,7 +1,7 @@
 server:
   port: 7001
 
-##单机版
+#单机版 服务器网址http://localhost:7001/
 #eureka:
 #  instance:
 #    hostname: localhost  # eureka服务端名字
@@ -13,7 +13,7 @@ server:
 #      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
 
 
-#集群版
+#集群版 host http://eureka7002.com:7002/
 eureka:
   instance:
     hostname: eureka7001.com  # eureka服务端名字
